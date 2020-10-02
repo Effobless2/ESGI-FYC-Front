@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Authentication from './components/Authentication';
 
 export default class App extends React.Component {
   render() {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
             Learn React
           </a>
         </header>
+        <Authentication />
       </div>
     );
   }
