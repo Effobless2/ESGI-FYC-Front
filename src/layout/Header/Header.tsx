@@ -19,6 +19,7 @@ export default class Header extends React.Component<HeaderProp> {
                     <Nav className="mr-auto">
                         <Nav.Link className="App-link" href="/">Home</Nav.Link>
                         <Nav.Link className="App-link" href="/authentication">Authentication</Nav.Link>
+                        <Nav.Link className="App-link" href="/contacts">Contacts</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

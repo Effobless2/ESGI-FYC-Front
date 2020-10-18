@@ -1,17 +1,19 @@
 import React from "react";
+import BButton from 'react-bootstrap/Button';
 import Logo from "../../components/shared/Logo";
 import User from "../../models";
 import { UserService } from "../../services/UserService";
+import UserDescription from '../../components/UserDescription';
 
 interface UserProfileState {
     userDatas?: User
     loading: boolean;
 }
 
-export default class UserProfile extends React.Component<{ match: { params: { userId: number } } }, UserProfileState> {
+export default class UserProfile extends React.Component<{ match: { params: { userId: number } }, history: any }, UserProfileState> {
     userService: UserService;
 
-    constructor(props: { match: { params: { userId: number } } }) {
+    constructor(props: any) {
         super(props);
         this.state = {
             userDatas: undefined,
@@ -33,7 +35,14 @@ export default class UserProfile extends React.Component<{ match: { params: { us
 
     render() {
         if (this.state.userDatas !== undefined)
-            return <h1>{this.state.userDatas!.firstName}</h1>
+            return (
+                <div>
+                    <UserDescription user={this.state.userDatas!}/>
+                    <BButton onClick={() => this.props.history.push(`/profile/edit/${this.state.userDatas!.id}`)}>
+                        Edit
+                    </BButton>
+                </div>
+            )
         else {
             return (
                 <div>
