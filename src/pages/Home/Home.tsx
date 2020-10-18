@@ -1,6 +1,6 @@
 import React from "react";
 import ListItem from "../../components/list-item";
-import logo from '../../logo.svg';
+import Logo from "../../components/shared/Logo";
 import { ControllerService } from "../../services/ControllerService";
 import './Home.css';
 
@@ -26,7 +26,7 @@ export default class Home extends React.Component<{}, HomeState> {
                 {this.state.elems.map((value, index) => {
                     return <ListItem key={index} content={value} />
                 })}
-                <img src={logo} className="App-logo" alt="logo" />
+                <Logo />
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                   </p>
