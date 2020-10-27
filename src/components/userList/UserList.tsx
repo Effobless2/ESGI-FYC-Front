@@ -1,6 +1,7 @@
 import React from "react";
 import User from "../../models";
 import UserItem from "./userItem/UserItem";
+import './UserList.css';
 
 import './UserList.css';
 

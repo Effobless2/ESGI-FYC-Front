@@ -1,9 +1,10 @@
 import React from "react";
 import BCard from 'react-bootstrap/Card';
-
 import User from "../../../models";
-
 import './UserItem.css';
+
+
+
 
 interface UserItemProp {
     user: User;

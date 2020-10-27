@@ -10,7 +10,7 @@ export class LogingService {
             email: registrationDatas.email,
             role: 'user'
         };
-        const response = await axios.post("http://localhost:8081/api/auth", body);
+        const response = await axios.post("http://localhost:8081/api/users/register", body);
         return response.data;
     }
 }

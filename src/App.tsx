@@ -1,16 +1,16 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+
+  Route, Switch
 } from "react-router-dom";
 import './App.css';
-import Authentication from './pages/Authentication';
-import Home from './pages/Home';
 import Header from './layout/Header';
-import UserProfile from './pages/UserProfile';
+import Authentication from './pages/Authentication';
 import Contacts from './pages/Contacts';
 import EditProfile from './pages/EditProfile';
+import Home from './pages/Home';
+import UserProfile from './pages/UserProfile';
 
 export type AppProps = {
   appName: string;

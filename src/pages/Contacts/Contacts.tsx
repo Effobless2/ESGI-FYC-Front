@@ -3,14 +3,13 @@ import Logo from "../../components/shared/Logo";
 import UserList from "../../components/userList";
 import User from "../../models";
 import { UserService } from "../../services/UserService";
-
 import './Contacts.css';
+
 
 interface ContactsState {
     userList?: User[];
     loading: boolean;
 }
-
 export default class Contacts extends React.Component<{ history: any },ContactsState> {
     userService: UserService = new UserService();
 
@@ -27,7 +26,7 @@ export default class Contacts extends React.Component<{ history: any },ContactsS
     componentDidMount() {
         this.userService.getAll()
             .then((result: User[]) => this.setState({userList: result, loading: result === []}))
-            .catch(err => console.error(err));
+            .catch(_ => alert("An Error Occured"));
     }
 
     redirectToUserProfile(user: User) {

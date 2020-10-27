@@ -1,7 +1,7 @@
 import React from "react";
+import EditFormular from '../../components/forms/signUp';
 import Logo from "../../components/shared/Logo";
 import User from "../../models";
-import EditFormular from '../../components/forms/signUp';
 import { UserService } from "../../services/UserService";
 
 interface EditProfileState {
@@ -31,6 +31,7 @@ export default class EditProfile extends React.Component<{match: { params: { use
     }
 
     onSubmitCallback(user: User) {
+        user.id = this.props.match.params.userId;
         this.userService.put(user)
             .then((result: number) => this.props.history.push(`/profile/${result}`))
             .catch(err => alert("An Error Occured"));
