@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent } from 'react';
 import BButton from 'react-bootstrap/Button';
 import BForm from 'react-bootstrap/Form';
-import User from '../../../models';
+import { User } from '../../../models/User';
 import './SignUpForm.css';
 
 interface AuthenticationState {

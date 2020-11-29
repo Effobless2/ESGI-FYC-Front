@@ -1,0 +1,17 @@
+.form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+}
+
+#formTitle {
+    width: 30%;
+}
+
+.button {
+    width: fit-content;
+    align-self: flex-end;
+}

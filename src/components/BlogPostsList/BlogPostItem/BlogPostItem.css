@@ -1,0 +1,36 @@
+.item {
+    border: solid gray 1px;
+    border-radius: 5px;
+    margin: 30px;
+    text-align: left;
+}
+
+.item:hover{
+    cursor:pointer;
+}
+
+.title {
+    width: fit-content;
+    margin: 10px;
+}
+
+.body {
+    margin: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.details {
+    margin-top: auto;
+    margin-left: 20px;
+}
+
+.preview {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

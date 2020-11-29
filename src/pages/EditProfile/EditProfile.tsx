@@ -1,7 +1,7 @@
 import React from "react";
 import EditFormular from '../../components/forms/signUp';
 import Logo from "../../components/shared/Logo";
-import User from "../../models";
+import { User } from '../../models/User';
 import { UserService } from "../../services/UserService";
 
 interface EditProfileState {

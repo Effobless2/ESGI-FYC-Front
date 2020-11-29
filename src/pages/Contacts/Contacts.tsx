@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../components/shared/Logo";
 import UserList from "../../components/userList";
-import User from "../../models";
+import { User } from '../../models/User';
 import { UserService } from "../../services/UserService";
 import './Contacts.css';
 
@@ -38,11 +38,6 @@ export default class Contacts extends React.Component<{ history: any },ContactsS
             return (
                 <div>
                     <Logo />
-                    {
-                        this.state.userList === [] ?
-                            <h2> No users found </h2>
-                        : <div></div>
-                    }
                 </div>
             )
         else {

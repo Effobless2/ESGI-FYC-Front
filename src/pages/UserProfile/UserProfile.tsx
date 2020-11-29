@@ -3,7 +3,7 @@ import BButton from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Logo from "../../components/shared/Logo";
 import UserDescription from '../../components/UserDescription';
-import User from "../../models";
+import { User } from '../../models/User';
 import { UserService } from "../../services/UserService";
 import './UserProfile.css';
 

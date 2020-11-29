@@ -1,9 +1,9 @@
 import React from 'react';
 import SignUpForm from '../../components/forms/signUp';
-import User from '../../models';
+import { User } from '../../models/User';
 import { LogingService } from '../../services/LogingService';
+import './Registration.css';
 
-import './Authentication.css';
 
 export default class Authentication extends React.Component<{history: any}> {
     loginService: LogingService;

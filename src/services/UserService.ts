@@ -1,5 +1,5 @@
 import axios from 'axios';
-import User from "../models";
+import { User } from '../models/User';
 
 
 export class UserService {

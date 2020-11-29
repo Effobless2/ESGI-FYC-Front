@@ -1,6 +1,6 @@
 import React from "react";
 import BCard from 'react-bootstrap/Card';
-import User from "../../../models";
+import { User } from '../../../models/User';
 import './UserItem.css';
 
 

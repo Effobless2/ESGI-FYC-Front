@@ -1,0 +1,12 @@
+.post {
+    width: 90%;
+    margin: auto;
+}
+
+#title {
+    margin: 20px;
+}
+
+#content {
+    text-align: justify;
+}

