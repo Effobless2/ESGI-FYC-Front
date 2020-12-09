@@ -4,7 +4,6 @@ import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import SignInForm from "../../components/forms/signInForm";
 import { User } from "../../models/User";
-import { LogingService } from "../../services/LogingService";
 import { StoreType } from "../../store";
 import { connectUser } from "../../store/actions/logingActions";
 import types from "../../store/types";
@@ -33,7 +32,6 @@ const mapDispatchProp = (dispatch: ThunkDispatch<any, any, types>, _: LogingProp
 });
 
 class Loging extends React.Component<Props> {
-    logingService: LogingService = new LogingService();
     constructor(props: Props) {
         super(props);
         this.onConnectedHandler = this.onConnectedHandler.bind(this);

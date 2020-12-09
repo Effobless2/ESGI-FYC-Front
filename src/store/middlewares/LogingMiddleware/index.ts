@@ -9,6 +9,7 @@ import ActionType from '../../types';
 import { CONNECT_ACTION } from "../../types/LogingActionTypes";
 
 const LogingMiddleware: Middleware<{}, RootState> = store => next => (action: ActionType) => {
+    console.log(action);
     switch(action.type) {
         case CONNECT_ACTION:
             LogingService.login(action.payload.login, action.payload.password)
@@ -16,8 +17,9 @@ const LogingMiddleware: Middleware<{}, RootState> = store => next => (action: Ac
                     let user: User = jwtParser.parse(result);
                     next(setToken(result));
                     next(setUser(user));
-                })
+                });
     }
+    next(action);
 }
 
 export default LogingMiddleware;
